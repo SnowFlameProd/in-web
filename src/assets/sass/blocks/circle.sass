@@ -1,0 +1,30 @@
+.circle
+  width: 450px
+  height: 450px
+
+  background: linear-gradient(to bottom, #f5576c, #f093fb)
+  box-shadow: 0 5px 25px rgba(#000, .15)
+  border-radius: 51% 49% 57% 43% / 54% 37% 63% 46%
+
+  position: absolute
+  right: 5rem
+  z-index: 1
+
+  animation: circleRadius 12s alternate infinite
+
+  @media (max-width: 1330px)
+    right: 0
+  
+  @media (max-width: 575px)
+    display: none
+
+@keyframes circleRadius
+  0%
+    border-radius: 51% 49% 57% 43% / 54% 37% 63% 46%
+    transform: translate3d(0, 0, 0)
+  50%
+    border-radius: 63% 37% 78% 22% / 54% 37% 63% 46% 
+    transform: translate3d(-100px, -80px, 0)
+  100%
+    border-radius: 20% 80% 82% 18% / 17% 68% 32% 83% 
+    transform: translate3d(-50px, -100px, 0)
